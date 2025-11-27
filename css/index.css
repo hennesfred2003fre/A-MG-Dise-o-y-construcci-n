@@ -1,0 +1,126 @@
+@import url(style.css);
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    color: white;
+    max-width: 350px;
+}
+
+.hero-text h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.paso {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+.paso-img img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.paso-texto h2 {
+    color: #0a3b78;
+    font-size: 32px;
+}
+
+.cards {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    width: 33%;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .2);
+}
+
+.card h3 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.card img {
+    width: 60px;
+    margin: 15px 0;
+}
+
+/* FOOTER */
+footer {
+    background: #0a3b78;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.foot-logo img {
+    width: 80px;
+}
+
+.foot-col h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+
+    .paso {
+        flex-direction: column;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

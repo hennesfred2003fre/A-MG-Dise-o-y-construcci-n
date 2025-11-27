@@ -1,0 +1,211 @@
+@import url(style.css);
+
+:root {
+    --color-arrow: #f99000;
+    /* Naranja fuerte para los botones */
+    --color-border: #ccddee;
+    /* Borde gris azulado de la página */
+    --color-active-thumb: #333;
+    /* Borde de miniatura activa */
+}
+
+
+.hero {
+    background: url('../imagen/proyectos/portada\ edificios.png') center/cover no-repeat;
+    color: var(--colorblanco);
+    text-align: center;
+    padding: 70px 0;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+
+/* Estilo general del contenedor */
+.carousel-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid var(--color-border);
+    position: relative;
+    /* Para posicionar las flechas */
+}
+
+/* Contenedor principal de la imagen y las flechas */
+.main-image-wrapper {
+    position: relative;
+    width: 100%;
+    /* Altura basada en una relación de aspecto común para imágenes de carrusel */
+    padding-bottom: 60%;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    display: none;
+    /* Oculta todas las imágenes por defecto */
+    transition: opacity 0.5s;
+}
+
+.main-image.active {
+    display: block;
+    /* Muestra solo la imagen activa */
+}
+
+/* Estilo de las Flechas de Navegación */
+.arrow {
+    position: absolute;
+    top: 35%;
+    /* Centrado verticalmente al lado de la imagen principal */
+    z-index: 10;
+    background-color: var(--color-arrow);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: background-color 0.2s;
+}
+
+.arrow:hover {
+    background-color: #e58200;
+    /* Un poco más oscuro al pasar el ratón */
+}
+
+.arrow-icon {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    /* Ajustes para centrar el carácter '>' o '<' */
+    position: relative;
+    top: -2px;
+}
+
+.left-arrow {
+    left: -30px;
+    /* Sale un poco del borde del contenedor */
+}
+
+.right-arrow {
+    right: -30px;
+    /* Sale un poco del borde del contenedor */
+}
+
+/* Miniaturas */
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* Espacio entre miniaturas */
+    overflow-x: auto;
+    /* Permite desplazamiento si hay muchas */
+    padding: 10px 0;
+}
+
+.thumb-image {
+    width: 80px;
+    /* Ancho fijo para las miniaturas */
+    height: 60px;
+    /* Altura fija */
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.7;
+    border: 3px solid transparent;
+    transition: opacity 0.3s, border-color 0.3s;
+}
+
+.thumb-image:hover {
+    opacity: 1;
+}
+
+.thumb-image.active {
+    opacity: 1;
+    border-color: var(--color-active-thumb);
+}
+
+:root {
+    --max-width: 1200px;
+    --color-title: #333;
+    --color-text: #555;
+    --spacing-large: 40px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    /* Fondo blanco */
+}
+
+/* Contenedor principal que centra el contenido */
+.content-wrapper {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: var(--spacing-large) auto;
+}
+
+/* Estilo para cada sección principal */
+.project-section {
+    margin-bottom: var(--spacing-large);
+}
+
+/* Títulos de las secciones */
+.section-title {
+    font-weight: 800;
+    /* Negrita similar a la imagen */
+    color: var(--colorazul);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-align: center;
+    /* Para que el texto de dos líneas se vea bien */
+}
+
+/* Párrafos de texto */
+.project-section p {
+    font-size: 14px;
+    color: var(--color-text);
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Fila de imágenes (dos columnas) */
+.image-row {
+    display: flex;
+    gap: 15px;
+    /* Espacio entre las imágenes */
+    margin-top: 20px;
+}
+
+.image-row img {
+    /* Ocupa casi el 50% del contenedor, menos la mitad del espacio (gap) */
+    width: calc(50% - 7.5px);
+    height: auto;
+    object-fit: cover;
+    /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Línea divisoria entre secciones (la línea gris sutil) */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: var(--spacing-large) 0;
+}
